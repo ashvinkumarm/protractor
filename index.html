@@ -1,8 +1,15 @@
-<html>
-<title>Protractor Beginner</title>
-
-<body>
-<h1>Tutorial</h1>
-
-</body>
-</html>
+<h1><strong>Tutorial</strong></h1>
+<p>This is a simple tutorial that shows you how to set up Protractor and start running tests.</p>
+<h1><strong>Prerequisites</strong></h1>
+<p>Protractor is a&nbsp;<a href="http://nodejs.org/">Node.js</a>&nbsp;program. To run, you will need to have Node.js installed. You will download Protractor package using&nbsp;<a href="https://www.npmjs.org/">npm</a>, which comes with Node.js. Check the version of Node.js you have by running&nbsp;node --version. Then, check the&nbsp;<a href="https://github.com/angular/protractor#compatibility">compatibility notes</a>&nbsp;in the Protractor README to make sure your version of Node.js is compatible with Protractor.</p>
+<p>By default, Protractor uses the&nbsp;<a href="http://jasmine.github.io/">Jasmine</a>&nbsp;test framework for its testing interface. This tutorial assumes some familiarity with Jasmine, and we will use version 2.4.</p>
+<p>This tutorial will set up a test using a local standalone Selenium Server to control browsers. You will need to have the&nbsp;<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java Development Kit (JDK)</a>installed to run the standalone Selenium Server. Check this by running&nbsp;java -version&nbsp;from the command line.</p>
+<h1><strong>Setup</strong></h1>
+<p>Use npm to install Protractor globally with:</p>
+<p>npm install -g protractor</p>
+<p>This will install two command line tools,&nbsp;protractor&nbsp;and&nbsp;webdriver-manager. Try running&nbsp;protractor --version&nbsp;to make sure it's working.</p>
+<p>The&nbsp;webdriver-manager&nbsp;is a helper tool to easily get an instance of a Selenium Server running. Use it to download the necessary binaries with:</p>
+<p>webdriver-manager update</p>
+<p>Now start up a server with:</p>
+<p>webdriver-manager start</p>
+<p>This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. Leave this server running throughout the tutorial. You can see information about the status of the server at&nbsp;http://localhost:4444/wd/hub.</p>
